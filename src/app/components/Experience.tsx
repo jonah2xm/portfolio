@@ -6,44 +6,44 @@ import { FiBriefcase, FiBook } from "react-icons/fi";
 const experiences = [
   {
     type: "work",
-    role: "Senior Full-Stack & AI Engineer",
-    company: "TechNova AI",
-    period: "2023 – Present",
+    role: "Full-Stack & AI Developer",
+    company: "Freelance",
+    period: "2024 – Present",
     description:
-      "Lead engineer on a team of 8, architecting and shipping an AI-driven SaaS platform used by 10,000+ users. Built RAG-powered document intelligence, real-time collaboration features, and a multi-tenant backend serving 500k+ API requests/day.",
+      "Freelance Full Stack Engineer delivering innovative web solutions with AI integration, including RAG-based applications, intelligent workflows, and custom systems based on the clients.",
     highlights: [
       "RAG Pipeline",
       "Real-time Collab",
       "Multi-tenant SaaS",
-      "Next.js 14",
+      "Next.js",
       "FastAPI",
     ],
   },
   {
     type: "work",
-    role: "Full-Stack Developer",
-    company: "StartupHQ",
-    period: "2021 – 2023",
+    role: "Full-Stack Engineer",
+    company: "Naftal SPA",
+    period: "2023 – Present",
     description:
-      "Built and maintained 3 production web platforms from the ground up. Integrated GPT-3/4 APIs for content generation, implemented microservices architecture on AWS, and reduced page load times by 60% through aggressive optimization.",
-    highlights: ["React", "Node.js", "AWS", "Microservices", "GPT API"],
+      "Full Stack Engineer responsible for designing, developing, and maintaining web applications and internal systems to optimize business operations.",
+    highlights: ["Next.js", "Node.js", "Express"],
   },
   {
     type: "work",
-    role: "Frontend Developer",
-    company: "DigitalCraft Agency",
-    period: "2020 – 2021",
+    role: "Full-Stack Engeneer",
+    company: "Sarl Ghaouti Ditribution",
+    period: "2023 – 2023",
     description:
-      "Developed responsive web apps for 12+ clients across e-commerce, fintech, and healthcare. Introduced TypeScript across the frontend codebase and mentored 2 junior developers.",
-    highlights: ["TypeScript", "React", "UI/UX", "Performance", "Mentoring"],
+      "Full Stack Engineer for a comprehensive web-based ERP system developed for Ghaouti Distribution SPA to manage operations, inventory, sales, and employee workflows.",
+    highlights: ["TypeScript", "React", "UI/UX", "SQL", "Deployement"],
   },
   {
     type: "education",
-    role: "B.Sc. Computer Science & AI",
-    company: "University of Technology",
-    period: "2016 – 2020",
+    role: "Master Degree Artificial Inteligence and its applications",
+    company: "University of Science and Technology Ahmed Ben Bella Oran,Algeria",
+    period: "2020 – 2022",
     description:
-      'Specialized in Machine Learning and Software Engineering. Thesis on "Attention Mechanisms in Transformer Models for Code Generation". Graduated with Honours.',
+      'Specialized in AI. Thesis on "fire forest detection using satelites images". Graduated with Honours.',
     highlights: ["Machine Learning", "NLP", "Algorithms", "Deep Learning"],
   },
 ];

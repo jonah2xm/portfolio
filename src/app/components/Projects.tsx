@@ -5,74 +5,63 @@ import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
 
 const projects = [
   {
-    title: "AI Document Intelligence Platform",
+    title: "Notaura",
     description:
-      "A production-ready SaaS platform that processes, indexes, and queries PDF/DOCX documents using GPT-4 and RAG architecture. Features smart chunking, vector similarity search, and a chat interface for document Q&A.",
-    tags: ["Next.js", "FastAPI", "OpenAI", "Pinecone", "PostgreSQL", "Docker"],
+      "Notaura is a smart productivity web application that enhances the reading experience by combining document viewing with intelligent note-taking features. It allows users to upload and interact with documents, highlight key information, and generate structured insights to improve comprehension and knowledge retention.",
+    tags: ["Next.js", "Stripe", "OpenAI", "MongoDB", "Mistral AI"],
     category: "AI",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/elhadjx/notaura",
+    live: "https://www.notaura.com/",
     featured: true,
     gradient: "linear-gradient(135deg, #1d4ed8, #3b82f6)",
   },
   {
-    title: "E-Commerce Full-Stack Platform",
+    title: "EasyShop",
     description:
-      "A high-performance e-commerce solution with real-time inventory, Stripe payment integration, admin dashboard, and AI-powered product recommendations.",
-    tags: ["Next.js", "Node.js", "MongoDB", "Redis", "Stripe", "TypeScript"],
+      "A full-featured e-commerce platform combined with powerful store management tools. It allows businesses to sell products online while efficiently managing inventory, orders, and customer data from a centralized dashboard.",
+    tags: ["Next.js", "Node.js", "MongoDB"],
     category: "Web",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/jonah2xm/easyshop",
+    live: "https://easyshop-nu.vercel.app/",
     featured: true,
     gradient: "linear-gradient(135deg, #1e40af, #7c3aed)",
   },
   {
-    title: "Real-Time Collaboration Tool",
+    title: "ByteMe",
     description:
-      "Notion-like collaborative workspace with real-time editing powered by CRDTs, WebSocket presence indicators, AI writing assistant, and version history.",
+      "A fast and efficient Point of Sale (POS) system designed for fast food restaurants to manage orders, payments, and inventory in real time.",
     tags: ["React", "Node.js", "Socket.io", "PostgreSQL", "Redis", "LangChain"],
     category: "Web",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/jonah2xm/fastFoodPos/tree/master",
+    live: "https://byteme.up.railway.app/",
     featured: false,
     gradient: "linear-gradient(135deg, #0369a1, #0ea5e9)",
   },
   {
-    title: "Multi-Agent AI Research Assistant",
+    title: "CoachSupport",
     description:
-      "An agentic AI system that orchestrates multiple LLM agents to autonomously research topics, synthesize information, and generate structured reports with citations.",
-    tags: ["Python", "LangChain", "OpenAI", "FastAPI", "Celery", "PostgreSQL"],
+      "A SaaS platform designed to help coaches streamline their business through intelligent automation. It uses AI-driven tools to manage client interactions, schedule appointments, and reduce administrative tasks.The platform provides a centralized dashboard for tracking clients, managing sessions, and monitoring performance. With features like automated messaging, smart booking, and payment integration, it improves efficiency and enhances the overall client experience.",
+    tags: ["Next.js", "Node.js", "OpenAI", "pinecone", "RAG", "MongoDB", "Stripe", "OAuth"],
     category: "AI",
-    github: "https://github.com",
-    live: "https://example.com",
+    github: "https://github.com/sintek-io/coachassist",
+    live: "https://www.coachsupport.online/",
     featured: true,
     gradient: "linear-gradient(135deg, #312e81, #4f46e5)",
   },
   {
-    title: "DevOps Monitoring Dashboard",
+    title: " NSC Portail Management",
     description:
-      "A Kubernetes-native observability platform with real-time metrics, log aggregation, alerting, and AI-powered anomaly detection.",
-    tags: ["React", "Python", "Kubernetes", "Prometheus", "Grafana", "OpenAI"],
-    category: "DevOps",
-    github: "https://github.com",
-    live: "https://example.com",
+      "built to streamline employee management across multiple locations. It provides a centralized platform to track staff information, monitor attendance, manage absences, and handle vacation requests efficiently.",
+    tags: ["Next.js", "Node.js", "SocketIO"],
+    category: "Web",
+    github: "https://github.com/jonah2xm/gasStationStaffManagement",
+    live: "https://gas-station-staff-management-vz4v.vercel.app",
     featured: false,
     gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
   },
-  {
-    title: "Voice-to-Code IDE Plugin",
-    description:
-      "A VS Code extension enabling voice-driven coding with Whisper transcription, GPT-4 code generation, and context-aware code suggestions.",
-    tags: ["TypeScript", "VS Code API", "OpenAI Whisper", "GPT-4", "Python"],
-    category: "AI",
-    github: "https://github.com",
-    live: "https://example.com",
-    featured: false,
-    gradient: "linear-gradient(135deg, #1e3a8a, #2563eb)",
-  },
 ];
 
-const categories = ["All", "Web", "AI", "DevOps"];
+const categories = ["All", "Web", "AI"];
 
 export default function Projects() {
   const ref = useRef(null);
