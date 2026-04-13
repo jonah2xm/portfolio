@@ -1,84 +1,19 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import {
   SiReact,
   SiNextdotjs,
   SiTypescript,
   SiNodedotjs,
-  SiPython,
   SiPostgresql,
   SiMongodb,
-  SiRedis,
   SiDocker,
-  SiKubernetes,
-  SiTailwindcss,
-  SiGraphql,
-  SiFastapi,
   SiOpenai,
-  SiLangchain,
   SiGit,
   SiLinux,
 } from "react-icons/si";
-import { FiDatabase, FiCloud } from "react-icons/fi";
-
-const skillCategories = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "React", icon: <SiReact />, level: 95, color: "#61DAFB" },
-      { name: "Next.js", icon: <SiNextdotjs />, level: 92, color: "#ffffff" },
-      {
-        name: "TypeScript",
-        icon: <SiTypescript />,
-        level: 90,
-        color: "#3178C6",
-      },
-      {
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss />,
-        level: 88,
-        color: "#06B6D4",
-      },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Node.js", icon: <SiNodedotjs />, level: 90, color: "#339933" },
-      { name: "FastAPI", icon: <SiFastapi />, level: 85, color: "#009688" },
-      { name: "GraphQL", icon: <SiGraphql />, level: 80, color: "#E10098" },
-    ],
-  },
-  {
-    title: "AI & ML",
-    skills: [
-      { name: "OpenAI APIs", icon: <SiOpenai />, level: 95, color: "#412991" },
-      { name: "LangChain", icon: <SiLangchain />, level: 85, color: "#1C3C3C" },
-      { name: "Vector DBs", icon: <FiDatabase />, level: 82, color: "#3b82f6" },
-      {
-        name: "LLM Fine-tuning",
-        icon: <SiOpenai />,
-        level: 75,
-        color: "#412991",
-      },
-    ],
-  },
-  {
-    title: "DevOps & Data",
-    skills: [
-      {
-        name: "PostgreSQL",
-        icon: <SiPostgresql />,
-        level: 88,
-        color: "#336791",
-      },
-      { name: "MongoDB", icon: <SiMongodb />, level: 85, color: "#47A248" },
-      { name: "Docker", icon: <SiDocker />, level: 87, color: "#2496ED" },
-      { name: "AWS", icon: <FiCloud />, level: 80, color: "#FF9900" },
-    ],
-  },
-];
+import { FiCloud } from "react-icons/fi";
 
 const techCloud = [
   { name: "React", icon: <SiReact size={28} />, color: "#61DAFB" },
@@ -93,11 +28,9 @@ const techCloud = [
   { name: "Git", icon: <SiGit size={28} />, color: "#F05032" },
   { name: "Linux", icon: <SiLinux size={28} />, color: "#FCC624" },
 ];
-
 export default function Skills() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [activeCategory, setActiveCategory] = useState(0);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -149,7 +82,7 @@ export default function Skills() {
                 gap: "0.75rem",
               }}
             >
-              {techCloud.map((tech, i) => (
+              {techCloud.map((tech) => (
                 <motion.div
                   key={tech.name}
                   className="glass-card"

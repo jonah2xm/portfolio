@@ -160,7 +160,7 @@ export default function Hero() {
                 color: "var(--text-primary)",
               }}
             >
-              Hi, I'm{" "}
+              Hi, I&apos;m{" "}
               <span className="gradient-text-animated">Younes Oubelaid</span>
             </motion.h1>
 

@@ -92,12 +92,12 @@ export default function About() {
                   fontSize: "1.05rem",
                 }}
               >
-                I'm a full-stack developer and AI integration specialist with a
+                I&apos;m a full-stack developer and AI integration specialist with a
                 deep passion for building technology that{" "}
                 <strong style={{ color: "var(--text-primary)" }}>
                   actually solves problems
                 </strong>
-                . With 2+ years of experience, I've shipped everything from SaaS
+                . With 2+ years of experience, I&apos;ve shipped everything from SaaS
                 platforms and e-commerce systems to AI-powered document
                 processors and LLM-driven chat applications.
               </p>

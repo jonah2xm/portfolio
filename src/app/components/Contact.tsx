@@ -7,7 +7,6 @@ import {
   FiMail,
   FiMapPin,
   FiSend,
-  FiTwitter,
 } from "react-icons/fi";
 
 const contactInfo = [
@@ -153,13 +152,13 @@ export default function Contact() {
               Contact
             </span>
             <h2 className="section-title" style={{ textAlign: "center" }}>
-              Let's <span className="gradient-text">Work Together</span>
+              Let&apos;s <span className="gradient-text">Work Together</span>
             </h2>
             <p
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              Have a project in mind? I'm available for freelance, consulting,
+              Have a project in mind? I&apos;m available for freelance, consulting,
               and full-time opportunities.
             </p>
           </motion.div>
@@ -202,7 +201,7 @@ export default function Contact() {
                   }}
                 >
                   Whether you need a full-stack platform, an AI-powered feature,
-                  or a strategic technical consult — I'm here for it. Let's
+                  or a strategic technical consult — I&apos;m here for it. Let&apos;s
                   build something great.
                 </p>
               </motion.div>
@@ -298,7 +297,7 @@ export default function Contact() {
                       Message Sent!
                     </h3>
                     <p style={{ color: "var(--text-muted)" }}>
-                      Thanks for reaching out! I'll get back to you within 24
+                      Thanks for reaching out! I&apos;ll get back to you within 24
                       hours.
                     </p>
                   </motion.div>

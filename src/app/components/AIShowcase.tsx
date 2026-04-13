@@ -134,7 +134,7 @@ export default function AIShowcase() {
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              I don't just call APIs — I architect intelligent systems that
+              I don&apos;t just call APIs — I architect intelligent systems that
               learn, reason, and deliver real value
             </p>
           </motion.div>
@@ -295,7 +295,7 @@ export default function AIShowcase() {
               <p
                 style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9rem" }}
               >
-                From prototype to production — let's build something intelligent
+                From prototype to production — let&apos;s build something intelligent
                 together.
               </p>
             </div>
@@ -308,7 +308,7 @@ export default function AIShowcase() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
               }}
             >
-              Let's Talk AI →
+              Let&apos;s Talk AI →
             </a>
           </motion.div>
         </motion.div>
