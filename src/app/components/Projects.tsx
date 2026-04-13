@@ -34,7 +34,7 @@ const projects = [
     category: "Web",
     github: "https://github.com/jonah2xm/fastFoodPos/tree/master",
     live: "https://byteme.up.railway.app/",
-    featured: false,
+    featured: true,
     gradient: "linear-gradient(135deg, #0369a1, #0ea5e9)",
   },
   {
@@ -56,7 +56,18 @@ const projects = [
     category: "Web",
     github: "https://github.com/jonah2xm/gasStationStaffManagement",
     live: "https://gas-station-staff-management-vz4v.vercel.app",
-    featured: false,
+    featured: true,
+    gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
+  },
+  {
+    title: " Supermely",
+    description:
+      "An AI-powered relationship counseling platform that delivers personalized guidance through secure chat sessions integrated with WhatsApp and Telegram. It features session management, intelligent responses using OpenAI, and a dedicated dashboard for professionals, built with Node.js and MongoDB.",
+    tags: ["Next.js", "Node.js", "SocketIO"],
+    category: "AI",
+    github: "https://github.com/elhadjx/artursarcijs",
+    live: "https://supermely.com/",
+    featured: true,
     gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
   },
 ];

@@ -50,7 +50,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" as const },
     },
   };
 
@@ -232,8 +232,10 @@ export default function Hero() {
                 Get In Touch
               </a>
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1T8f6FkCQ9RCETgizGV9PUINB3_AWcfSV"
                 className="btn-outline"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   borderColor: "var(--border)",
                   color: "var(--text-secondary)",
@@ -286,12 +288,12 @@ export default function Hero() {
                     textDecoration: "none",
                   }}
                   onMouseEnter={(e) =>
-                    ((e.currentTarget as HTMLElement).style.color =
-                      "var(--accent)")
+                  ((e.currentTarget as HTMLElement).style.color =
+                    "var(--accent)")
                   }
                   onMouseLeave={(e) =>
-                    ((e.currentTarget as HTMLElement).style.color =
-                      "var(--text-secondary)")
+                  ((e.currentTarget as HTMLElement).style.color =
+                    "var(--text-secondary)")
                   }
                 >
                   {s.icon}
@@ -328,6 +330,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 }

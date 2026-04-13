@@ -46,7 +46,6 @@ const skillCategories = [
     title: "Backend",
     skills: [
       { name: "Node.js", icon: <SiNodedotjs />, level: 90, color: "#339933" },
-      { name: "Python", icon: <SiPython />, level: 92, color: "#3776AB" },
       { name: "FastAPI", icon: <SiFastapi />, level: 85, color: "#009688" },
       { name: "GraphQL", icon: <SiGraphql />, level: 80, color: "#E10098" },
     ],
@@ -85,7 +84,6 @@ const techCloud = [
   { name: "React", icon: <SiReact size={28} />, color: "#61DAFB" },
   { name: "Next.js", icon: <SiNextdotjs size={28} />, color: "#aaaaaa" },
   { name: "TypeScript", icon: <SiTypescript size={28} />, color: "#3178C6" },
-  { name: "Python", icon: <SiPython size={28} />, color: "#3776AB" },
   { name: "Node.js", icon: <SiNodedotjs size={28} />, color: "#339933" },
   { name: "PostgreSQL", icon: <SiPostgresql size={28} />, color: "#336791" },
   { name: "MongoDB", icon: <SiMongodb size={28} />, color: "#47A248" },

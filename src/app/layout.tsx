@@ -24,7 +24,6 @@ export const metadata: Metadata = {
     "AI Integration",
     "React",
     "Next.js",
-    "Python",
     "Machine Learning",
     "LLM",
     "Portfolio",
