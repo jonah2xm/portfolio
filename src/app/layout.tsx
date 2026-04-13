@@ -35,6 +35,9 @@ export const metadata: Metadata = {
       "Full-Stack Web Developer & AI Integration Specialist building scalable apps and intelligent solutions.",
     type: "website",
   },
+  icons: {
+    icon: "/icon_header.svg",
+  },
 };
 
 export default function RootLayout({
