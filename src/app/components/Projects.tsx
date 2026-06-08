@@ -5,6 +5,17 @@ import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
 
 const projects = [
   {
+    title: "Medixa",
+    description:
+      "An AI-powered study platform that transforms PDFs into interactive learning material. Upload a document and get auto-generated MCQs, concise summaries, and audio podcasts — powered by a RAG pipeline with Gemini AI, Pinecone vector search, and a BullMQ job queue for async processing.",
+    tags: ["Next.js", "Node.js", "MongoDB", "Gemini AI", "Pinecone", "BullMQ", "Cloudflare R2"],
+    category: "AI",
+    github: "https://github.com/jonah2xm/Medixa",
+    live: "https://medixa-tau.vercel.app/",
+    featured: true,
+    gradient: "linear-gradient(135deg, #0f766e, #14b8a6)",
+  },
+  {
     title: "Notaura",
     description:
       "Notaura is a smart productivity web application that enhances the reading experience by combining document viewing with intelligent note-taking features. It allows users to upload and interact with documents, highlight key information, and generate structured insights to improve comprehension and knowledge retention.",
@@ -40,7 +51,7 @@ const projects = [
   {
     title: "CoachSupport",
     description:
-      "A SaaS platform designed to help coaches streamline their business through intelligent automation. It uses AI-driven tools to manage client interactions, schedule appointments, and reduce administrative tasks.The platform provides a centralized dashboard for tracking clients, managing sessions, and monitoring performance. With features like automated messaging, smart booking, and payment integration, it improves efficiency and enhances the overall client experience.",
+      "A SaaS platform designed to help coaches streamline their business through intelligent automation. It uses AI-driven tools to manage client interactions, schedule appointments, and reduce administrative tasks. The platform provides a centralized dashboard for tracking clients, managing sessions, and monitoring performance. With features like automated messaging, smart booking, and payment integration, it improves efficiency and enhances the overall client experience.",
     tags: ["Next.js", "Node.js", "OpenAI", "pinecone", "RAG", "MongoDB", "Stripe", "OAuth"],
     category: "AI",
     github: "https://github.com/sintek-io/coachassist",
@@ -49,9 +60,9 @@ const projects = [
     gradient: "linear-gradient(135deg, #312e81, #4f46e5)",
   },
   {
-    title: " NSC Portail Management",
+    title: "NSC Portail Management",
     description:
-      "built to streamline employee management across multiple locations. It provides a centralized platform to track staff information, monitor attendance, manage absences, and handle vacation requests efficiently.",
+      "Built to streamline employee management across multiple locations. It provides a centralized platform to track staff information, monitor attendance, manage absences, and handle vacation requests efficiently.",
     tags: ["Next.js", "Node.js", "SocketIO"],
     category: "Web",
     github: "https://github.com/jonah2xm/gasStationStaffManagement",
@@ -60,7 +71,7 @@ const projects = [
     gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
   },
   {
-    title: " Supermely",
+    title: "Supermely",
     description:
       "An AI-powered relationship counseling platform that delivers personalized guidance through secure chat sessions integrated with WhatsApp and Telegram. It features session management, intelligent responses using OpenAI, and a dedicated dashboard for professionals, built with Node.js and MongoDB.",
     tags: ["Next.js", "Node.js", "SocketIO"],
@@ -68,7 +79,7 @@ const projects = [
     github: "https://github.com/elhadjx/artursarcijs",
     live: "https://supermely.com/",
     featured: true,
-    gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
+    gradient: "linear-gradient(135deg, #701a75, #a21caf)",
   },
 ];
 
@@ -108,9 +119,7 @@ export default function Projects() {
             variants={itemVariants}
             style={{ marginBottom: "3rem", textAlign: "center" }}
           >
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              Portfolio
-            </span>
+
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Featured <span className="gradient-text">Projects</span>
             </h2>

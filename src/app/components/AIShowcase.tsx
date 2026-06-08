@@ -120,10 +120,7 @@ export default function AIShowcase() {
             variants={itemVariants}
             style={{ marginBottom: "3.5rem", textAlign: "center" }}
           >
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              <SiOpenai size={12} />
-              AI Integration
-            </span>
+
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Where Web Meets{" "}
               <span className="gradient-text-animated">

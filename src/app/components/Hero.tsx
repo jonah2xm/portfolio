@@ -137,16 +137,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            {/* Badge */}
-            <motion.div
-              variants={itemVariants}
-              style={{ marginBottom: "1.5rem" }}
-            >
-              <span className="badge">
-                <SiOpenai size={12} />
-                Available for work
-              </span>
-            </motion.div>
+
 
             {/* Heading */}
             <motion.h1

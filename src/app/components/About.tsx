@@ -44,9 +44,7 @@ export default function About() {
             variants={itemVariants}
             style={{ marginBottom: "3.5rem", textAlign: "center" }}
           >
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              About Me
-            </span>
+
             <h2 className="section-title" style={{ textAlign: "center" }}>
               The Developer{" "}
               <span className="gradient-text">Behind the Code</span>

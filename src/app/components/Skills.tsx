@@ -58,9 +58,7 @@ export default function Skills() {
             variants={itemVariants}
             style={{ marginBottom: "3.5rem", textAlign: "center" }}
           >
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              Tech Stack
-            </span>
+
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Skills & <span className="gradient-text">Technologies</span>
             </h2>

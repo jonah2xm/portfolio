@@ -56,7 +56,7 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    
+
     try {
       const response = await fetch("/api/send", {
         method: "POST",
@@ -148,9 +148,6 @@ export default function Contact() {
             variants={itemVariants}
             style={{ marginBottom: "3.5rem", textAlign: "center" }}
           >
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              Contact
-            </span>
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Let&apos;s <span className="gradient-text">Work Together</span>
             </h2>

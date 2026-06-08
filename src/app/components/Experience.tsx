@@ -66,9 +66,7 @@ export default function Experience() {
         >
           {/* Header */}
           <div style={{ marginBottom: "3.5rem", textAlign: "center" }}>
-            <span className="badge" style={{ marginBottom: "1rem" }}>
-              Career
-            </span>
+
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Work <span className="gradient-text">Experience</span>
             </h2>
