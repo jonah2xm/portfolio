@@ -46,9 +46,7 @@ export default function Footer() {
             gap: "0.3rem",
           }}
         >
-          © {year} Younes Oubelaid. Built with{" "}
-          <FiHeart size={13} style={{ color: "#ef4444" }} /> using Next.js &
-          Tailwind
+          © {year} Younes Oubelaid.
         </p>
 
         {/* Socials */}
