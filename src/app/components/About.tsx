@@ -7,7 +7,7 @@ const stats = [
   { icon: <FiBriefcase size={22} />, value: "2+", label: "Years Experience" },
   { icon: <FiCode size={22} />, value: "7+", label: "Projects Delivered" },
   { icon: <FiCpu size={22} />, value: "5+", label: "AI Integrations" },
-  { icon: <FiUsers size={22} />, value: "10+", label: "Happy Clients" },
+  { icon: <FiUsers size={22} />, value: "5+", label: "Happy Clients" },
 ];
 
 export default function About() {
