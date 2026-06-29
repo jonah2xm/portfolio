@@ -223,7 +223,7 @@ export default function Hero() {
                 Get In Touch
               </a>
               <a
-                href="https://drive.google.com/uc?export=download&id=1T8f6FkCQ9RCETgizGV9PUINB3_AWcfSV"
+                href="https://drive.google.com/file/d/1zXs2JvLEqbGvU_I4D7CS2mVy_7IZmHSU/view?usp=sharing"
                 className="btn-outline"
                 target="_blank"
                 rel="noopener noreferrer"
