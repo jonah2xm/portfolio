@@ -6,45 +6,47 @@ import { FiBriefcase, FiBook } from "react-icons/fi";
 const experiences = [
   {
     type: "work",
-    role: "Full-Stack & AI Developer",
-    company: "Freelance",
-    period: "2024 – Present",
+    role: "Full-Stack Developer & Co-founder",
+    company: "Sintek.io",
+    period: "Aug 2024 – Present",
     description:
-      "Freelance Full Stack Engineer delivering innovative web solutions with AI integration, including RAG-based applications, intelligent workflows, and custom systems based on the clients.",
-    highlights: [
-      "RAG Pipeline",
-      "Real-time Collab",
-      "Multi-tenant SaaS",
-      "Next.js",
-      "FastAPI",
-    ],
+      "Two-person dev studio delivering paid web and AI products for international clients, from first spec through staging to production launch. Projects include Notaura (1,000+ subscribers), CoachSupport and a restaurant POS.",
+    highlights: ["Next.js", "Express", "MongoDB", "Stripe", "RAG", "socket.io"],
   },
   {
     type: "work",
-    role: "Full-Stack Engineer",
-    company: "Naftal SPA",
-    period: "2023 – Present",
+    role: "Software Development Engineer",
+    company: "Naftal SPA (Sonatrach group)",
+    period: "Aug 2023 – Present",
     description:
-      "Full Stack Engineer responsible for designing, developing, and maintaining web applications and internal systems to optimize business operations.",
-    highlights: ["Next.js", "Node.js", "Express"],
+      "Build internal systems used across 7 Naftal sites: NaftTime (HR attendance, replacing the legacy Naft Presence software) and Naftal Staff Connect, plus REST APIs and dashboards for operational reporting.",
+    highlights: ["Next.js", "Express", "Prisma", "PostgreSQL", "MongoDB", "Docker"],
   },
   {
     type: "work",
-    role: "Full-Stack Engeneer",
-    company: "Sarl Ghaouti Ditribution",
-    period: "2023 – 2023",
+    role: "Software Development Engineer",
+    company: "SARL Ghaouti Pro Distribution",
+    period: "Mar 2023 – Aug 2023",
     description:
-      "Full Stack Engineer for a comprehensive web-based ERP system developed for Ghaouti Distribution SPA to manage operations, inventory, sales, and employee workflows.",
-    highlights: ["TypeScript", "React", "UI/UX", "SQL", "Deployement"],
+      "Built REST APIs and ERP modules for sales and distribution; extended database schemas for multi-user access.",
+    highlights: ["REST APIs", "ERP", "SQL"],
   },
   {
     type: "education",
-    role: "Master Degree Artificial Inteligence and its applications",
-    company: "University of Science and Technology Ahmed Ben Bella Oran,Algeria",
+    role: "MSc in Artificial Intelligence",
+    company: "University of Science and Technology of Oran (USTO)",
     period: "2020 – 2022",
     description:
-      'Specialized in AI. Thesis on "fire forest detection using satelites images". Graduated with Honours.',
-    highlights: ["Machine Learning", "NLP", "Algorithms", "Deep Learning"],
+      "Machine learning, deep learning, computer vision, NLP. Thesis: forest fire detection from satellite imagery. Graduated with Honours.",
+    highlights: ["Machine Learning", "Deep Learning", "Computer Vision", "NLP"],
+  },
+  {
+    type: "education",
+    role: "BSc in Computer Science",
+    company: "University Centre of Naama",
+    period: "2017 – 2020",
+    description: "Bachelor's degree in Computer Science.",
+    highlights: [],
   },
 ];
 
@@ -74,7 +76,7 @@ export default function Experience() {
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              My professional journey building real products and teams
+              My professional journey building real products
             </p>
           </div>
 

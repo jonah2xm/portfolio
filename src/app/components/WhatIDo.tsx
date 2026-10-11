@@ -1,68 +1,39 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { SiOpenai, SiLangchain } from "react-icons/si";
-import {
-  FiZap,
-  FiDatabase,
-  FiMessageSquare,
-  FiCpu,
-  FiSearch,
-  FiShield,
-} from "react-icons/fi";
+import { FiLayers, FiCpu, FiZap } from "react-icons/fi";
 
 const features = [
   {
-    icon: <FiMessageSquare size={24} />,
-    title: "LLM-Powered Chatbots",
+    icon: <FiLayers size={24} />,
+    title: "Full-Stack Web Apps",
     description:
-      "Context-aware conversational AI with memory management, tool use, multi-turn dialogue, and fallback handling using GPT-4, Claude, and Gemini.",
-    tags: ["OpenAI", "Claude", "LangChain", "Redis"],
+      "Production apps built end-to-end with Next.js, Node.js and PostgreSQL or MongoDB: authentication, Stripe subscriptions, admin dashboards and Docker deployments.",
+    proof: "Notaura · CoachSupport · NaftTime",
+    tags: ["Next.js", "Express", "PostgreSQL", "MongoDB", "Stripe", "Docker"],
     glow: "rgba(59, 130, 246, 0.2)",
   },
   {
-    icon: <FiSearch size={24} />,
-    title: "RAG Pipelines",
+    icon: <FiCpu size={24} />,
+    title: "AI Features",
     description:
-      "Retrieval-Augmented Generation systems for document Q&A with smart chunking, embedding, vector search, and re-ranking for maximum accuracy.",
-    tags: ["Pinecone", "Weaviate", "LlamaIndex", "Embeddings"],
+      "RAG chat over a client's own documents, AI PDF reading and per-user usage quotas, built on OpenAI and Mistral with Pinecone vector search and background job queues.",
+    proof: "Notaura · CoachSupport",
+    tags: ["RAG", "OpenAI", "Mistral", "Pinecone", "Bull"],
     glow: "rgba(99, 102, 241, 0.2)",
   },
   {
-    icon: <FiCpu size={24} />,
-    title: "AI Agents & Orchestration",
-    description:
-      "Multi-agent systems that plan, reason, and act autonomously. Built ReAct and plan-and-execute agents for research, coding, and data tasks.",
-    tags: ["LangGraph", "AutoGen", "Tool Calling", "CrewAI"],
-    glow: "rgba(139, 92, 246, 0.2)",
-  },
-  {
-    icon: <FiDatabase size={24} />,
-    title: "Vector Databases & Embeddings",
-    description:
-      "Designed and deployed scalable vector storage solutions for semantic search, recommendation systems, and knowledge bases.",
-    tags: ["Pinecone", "Qdrant", "pgvector", "Chroma"],
-    glow: "rgba(6, 182, 212, 0.2)",
-  },
-  {
     icon: <FiZap size={24} />,
-    title: "AI-Powered APIs",
+    title: "Real-Time Systems",
     description:
-      "Production-grade AI APIs with rate limiting, caching, streaming responses, fallback chains, cost tracking, and observability.",
-    tags: ["FastAPI", "LangSmith", "Tracing", "Cost Mgmt"],
-    glow: "rgba(234, 179, 8, 0.15)",
-  },
-  {
-    icon: <FiShield size={24} />,
-    title: "Fine-tuning & Alignment",
-    description:
-      "Fine-tuned domain-specific models using LoRA/QLoRA techniques and implemented RLHF-based alignment for specialized enterprise use cases.",
-    tags: ["LoRA", "RLHF", "Hugging Face", "Axolotl"],
-    glow: "rgba(239, 68, 68, 0.15)",
+      "Live order flow between POS, kitchen and delivery screens, real-time staff notifications, time-clock sync workers and local/remote sync that keeps working offline.",
+    proof: "Restaurant POS · NaftTime · Naftal Staff Connect",
+    tags: ["socket.io", "WebSockets", "node-cron", "Offline sync"],
+    glow: "rgba(6, 182, 212, 0.2)",
   },
 ];
 
-export default function AIShowcase() {
+export default function WhatIDo() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -77,7 +48,7 @@ export default function AIShowcase() {
 
   return (
     <section
-      id="ai"
+      id="services"
       className="section-padding"
       style={{ position: "relative", overflow: "hidden" }}
     >
@@ -122,17 +93,15 @@ export default function AIShowcase() {
           >
 
             <h2 className="section-title" style={{ textAlign: "center" }}>
-              Where Web Meets{" "}
-              <span className="gradient-text-animated">
-                Artificial Intelligence
-              </span>
+              What I{" "}
+              <span className="gradient-text-animated">Do</span>
             </h2>
             <p
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              I don&apos;t just call APIs — I architect intelligent systems that
-              learn, reason, and deliver real value
+              Three things I&apos;ve shipped to production and can walk you
+              through
             </p>
           </motion.div>
 
@@ -227,6 +196,17 @@ export default function AIShowcase() {
                   {feat.description}
                 </p>
 
+                <p
+                  style={{
+                    color: "var(--text-secondary)",
+                    fontSize: "0.82rem",
+                    fontWeight: 600,
+                    marginBottom: "1rem",
+                  }}
+                >
+                  Shipped in: {feat.proof}
+                </p>
+
                 {/* Tags */}
                 <div
                   style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}
@@ -277,7 +257,7 @@ export default function AIShowcase() {
                   marginBottom: "0.4rem",
                 }}
               >
-                <SiLangchain style={{ color: "#4ade80" }} />
+                <FiZap style={{ color: "#4ade80" }} />
                 <span
                   style={{
                     color: "white",
@@ -286,14 +266,14 @@ export default function AIShowcase() {
                     fontFamily: "'Space Grotesk', sans-serif",
                   }}
                 >
-                  Ready to build your AI-powered product?
+                  Have a product to build?
                 </span>
               </div>
               <p
                 style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9rem" }}
               >
-                From prototype to production — let&apos;s build something intelligent
-                together.
+                From first spec to production launch, let&apos;s talk about what
+                you need.
               </p>
             </div>
             <a
@@ -305,7 +285,7 @@ export default function AIShowcase() {
                 boxShadow: "0 4px 20px rgba(0,0,0,0.3)",
               }}
             >
-              Let&apos;s Talk AI →
+              Let&apos;s Talk →
             </a>
           </motion.div>
         </motion.div>

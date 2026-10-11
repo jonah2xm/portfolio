@@ -1,97 +1,141 @@
 "use client";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
+import { FiGithub, FiExternalLink, FiLock } from "react-icons/fi";
 
-const projects = [
-  {
-    title: "Medixa",
-    description:
-      "An AI-powered study platform that transforms PDFs into interactive learning material. Upload a document and get auto-generated MCQs, concise summaries, and audio podcasts — powered by a RAG pipeline with Gemini AI, Pinecone vector search, and a BullMQ job queue for async processing.",
-    tags: ["Next.js", "Node.js", "MongoDB", "Gemini AI", "Pinecone", "BullMQ", "Cloudflare R2"],
-    category: "AI",
-    github: "https://github.com/jonah2xm/Medixa",
-    live: "https://medixa-tau.vercel.app/",
-    featured: true,
-    gradient: "linear-gradient(135deg, #0f766e, #14b8a6)",
-  },
+type Project = {
+  title: string;
+  summary: string;
+  metric?: string;
+  tags: string[];
+  github?: string;
+  live?: string;
+  image?: string;
+  note?: string;
+  gradient: string;
+};
+
+const projects: Project[] = [
   {
     title: "Notaura",
-    description:
-      "Notaura is a smart productivity web application that enhances the reading experience by combining document viewing with intelligent note-taking features. It allows users to upload and interact with documents, highlight key information, and generate structured insights to improve comprehension and knowledge retention.",
-    tags: ["Next.js", "Stripe", "OpenAI", "MongoDB", "Mistral AI"],
-    category: "AI",
-    github: "https://github.com/elhadjx/notaura",
-    live: "https://www.notaura.com/",
-    featured: true,
+    summary:
+      "AI PDF reader SaaS: chat with your documents, highlight and take notes. Built in a 2-person team with Stripe subscriptions, per-user quotas and an admin dashboard.",
+    metric: "1,000+ subscribers",
+    tags: ["Next.js 15", "Express", "MongoDB", "Stripe", "OpenAI", "Mistral", "Bull"],
+    live: "https://notaura.app/",
     gradient: "linear-gradient(135deg, #1d4ed8, #3b82f6)",
   },
   {
-    title: "EasyShop",
-    description:
-      "A full-featured e-commerce platform combined with powerful store management tools. It allows businesses to sell products online while efficiently managing inventory, orders, and customer data from a centralized dashboard.",
-    tags: ["Next.js", "Node.js", "MongoDB"],
-    category: "Web",
-    github: "https://github.com/jonah2xm/easyshop",
-    live: "https://easyshop-nu.vercel.app/",
-    featured: true,
-    gradient: "linear-gradient(135deg, #1e40af, #7c3aed)",
-  },
-  {
-    title: "ByteMe",
-    description:
-      "A fast and efficient Point of Sale (POS) system designed for fast food restaurants to manage orders, payments, and inventory in real time.",
-    tags: ["React", "Node.js", "Socket.io", "PostgreSQL", "Redis", "LangChain"],
-    category: "Web",
-    github: "https://github.com/jonah2xm/fastFoodPos/tree/master",
-    live: "https://byteme.up.railway.app/",
-    featured: true,
-    gradient: "linear-gradient(135deg, #0369a1, #0ea5e9)",
-  },
-  {
     title: "CoachSupport",
-    description:
-      "A SaaS platform designed to help coaches streamline their business through intelligent automation. It uses AI-driven tools to manage client interactions, schedule appointments, and reduce administrative tasks. The platform provides a centralized dashboard for tracking clients, managing sessions, and monitoring performance. With features like automated messaging, smart booking, and payment integration, it improves efficiency and enhances the overall client experience.",
-    tags: ["Next.js", "Node.js", "OpenAI", "pinecone", "RAG", "MongoDB", "Stripe", "OAuth"],
-    category: "AI",
-    github: "https://github.com/sintek-io/coachassist",
+    summary:
+      "Dutch AI assistant for professional coaches: RAG chat over coaching methodologies and books, Google/Facebook sign-in, 14-day trial and Stripe plans.",
+    tags: ["Next.js 15", "Express 5", "MongoDB", "Pinecone", "OpenAI", "Stripe"],
     live: "https://www.coachsupport.online/",
-    featured: true,
     gradient: "linear-gradient(135deg, #312e81, #4f46e5)",
   },
   {
-    title: "NSC Portail Management",
-    description:
-      "Built to streamline employee management across multiple locations. It provides a centralized platform to track staff information, monitor attendance, manage absences, and handle vacation requests efficiently.",
-    tags: ["Next.js", "Node.js", "SocketIO"],
-    category: "Web",
-    github: "https://github.com/jonah2xm/gasStationStaffManagement",
-    live: "https://gas-station-staff-management-vz4v.vercel.app",
-    featured: true,
-    gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
+    title: "Restaurant POS & Online Ordering",
+    summary:
+      "Point of sale for a fast-food restaurant in Oran: POS, real-time API, QR menu and thermal-printer agent in one repo, with local/remote sync so it keeps running offline.",
+    metric: "14 staff screens",
+    tags: ["React 19", "Vite", "Express", "MongoDB", "socket.io", "Docker"],
+    github: "https://github.com/jonah2xm/246",
+    image: "/projects/restaurant-pos.png",
+    note: "Runs on-site, no public demo",
+    gradient: "linear-gradient(135deg, #0369a1, #0ea5e9)",
   },
   {
-    title: "Supermely",
-    description:
-      "An AI-powered relationship counseling platform that delivers personalized guidance through secure chat sessions integrated with WhatsApp and Telegram. It features session management, intelligent responses using OpenAI, and a dedicated dashboard for professionals, built with Node.js and MongoDB.",
-    tags: ["Next.js", "Node.js", "SocketIO"],
-    category: "AI",
-    github: "https://github.com/elhadjx/artursarcijs",
-    live: "https://supermely.com/",
-    featured: true,
-    gradient: "linear-gradient(135deg, #701a75, #a21caf)",
+    title: "NaftTime",
+    summary:
+      "HR attendance system that replaced Naftal's legacy “Naft Presence” software: a sync worker reads ZKTeco time clocks over TCP and builds the monthly attendance sheets.",
+    metric: "Deployed at 7 Naftal sites",
+    tags: ["Next.js 14", "NextAuth", "Express", "Prisma", "PostgreSQL", "Zod", "Docker"],
+    note: "Internal Naftal system, no public demo",
+    gradient: "linear-gradient(135deg, #0f766e, #14b8a6)",
+  },
+  {
+    title: "Naftal Staff Connect",
+    summary:
+      "Staff management for Naftal gas stations: staff records, station assignments, leave and absences, document generation with tracked transmittal slips and real-time notifications.",
+    tags: ["Next.js", "Express", "MongoDB", "socket.io", "node-cron"],
+    note: "Internal Naftal system, no public demo",
+    gradient: "linear-gradient(135deg, #0c4a6e, #0284c7)",
   },
 ];
 
-const categories = ["All", "Web", "AI"];
+const otherProjects = [
+  {
+    title: "Medixa",
+    summary: "Turns PDFs into MCQs, summaries and audio podcasts with a RAG pipeline.",
+    live: "https://medixa-tau.vercel.app/",
+  },
+  {
+    title: "EasyShop",
+    summary: "E-commerce storefront with inventory and order management dashboard.",
+    live: "https://easyshop-nu.vercel.app/",
+  },
+  {
+    title: "Supermely",
+    summary: "AI relationship-counseling chat with WhatsApp and Telegram integration.",
+    live: "https://supermely.com/",
+  },
+];
+
+const linkStyle = {
+  display: "flex",
+  alignItems: "center",
+  gap: "0.4rem",
+  color: "var(--text-secondary)",
+  textDecoration: "none",
+  fontSize: "0.85rem",
+  fontWeight: 500,
+  padding: "0.4rem 0.85rem",
+  borderRadius: "8px",
+  border: "1px solid var(--border)",
+  transition: "all 0.2s ease",
+};
+
+const liveLinkStyle = {
+  ...linkStyle,
+  color: "white",
+  border: "none",
+  background: "linear-gradient(135deg, var(--blue-600), var(--blue-500))",
+};
+
+function CodeLink({ href }: { href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={linkStyle}
+      onMouseEnter={(e) => {
+        const el = e.currentTarget as HTMLElement;
+        el.style.borderColor = "var(--accent)";
+        el.style.color = "var(--accent)";
+      }}
+      onMouseLeave={(e) => {
+        const el = e.currentTarget as HTMLElement;
+        el.style.borderColor = "var(--border)";
+        el.style.color = "var(--text-secondary)";
+      }}
+    >
+      <FiGithub size={14} /> Code
+    </a>
+  );
+}
+
+function LiveLink({ href }: { href: string }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" style={liveLinkStyle}>
+      <FiExternalLink size={14} /> Live
+    </a>
+  );
+}
 
 export default function Projects() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [filter, setFilter] = useState("All");
-
-  const filtered =
-    filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -119,7 +163,6 @@ export default function Projects() {
             variants={itemVariants}
             style={{ marginBottom: "3rem", textAlign: "center" }}
           >
-
             <h2 className="section-title" style={{ textAlign: "center" }}>
               Featured <span className="gradient-text">Projects</span>
             </h2>
@@ -127,65 +170,23 @@ export default function Projects() {
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              Real-world applications built with modern tech stacks and AI
-              integration
+              Production apps used by real customers and staff
             </p>
-          </motion.div>
-
-          {/* Filter Tabs */}
-          <motion.div
-            variants={itemVariants}
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "0.5rem",
-              justifyContent: "center",
-              marginBottom: "2.5rem",
-            }}
-          >
-            {categories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setFilter(cat)}
-                style={{
-                  padding: "0.5rem 1.5rem",
-                  borderRadius: "50px",
-                  border: "1px solid",
-                  borderColor:
-                    filter === cat ? "var(--accent)" : "var(--border)",
-                  background:
-                    filter === cat
-                      ? "linear-gradient(135deg, var(--blue-600), var(--blue-500))"
-                      : "transparent",
-                  color: filter === cat ? "white" : "var(--text-muted)",
-                  cursor: "pointer",
-                  fontWeight: 600,
-                  fontSize: "0.85rem",
-                  transition: "all 0.2s ease",
-                }}
-              >
-                {cat}
-              </button>
-            ))}
           </motion.div>
 
           {/* Project Grid */}
           <motion.div
-            layout
+            variants={containerVariants}
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fill, minmax(min(340px, 100%), 1fr))",
               gap: "1.5rem",
             }}
           >
-            {filtered.map((project, i) => (
+            {projects.map((project) => (
               <motion.article
                 key={project.title}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3, delay: i * 0.05 }}
+                variants={itemVariants}
                 className="glass-card"
                 style={{
                   padding: 0,
@@ -197,6 +198,31 @@ export default function Projects() {
                 {/* Card top bar */}
                 <div style={{ height: "5px", background: project.gradient }} />
 
+                {project.image && (
+                  <a
+                    href={project.image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "block",
+                      borderBottom: "1px solid var(--border)",
+                      background: "var(--bg-secondary)",
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={project.image}
+                      alt={`${project.title} screenshot`}
+                      loading="lazy"
+                      style={{
+                        display: "block",
+                        width: "100%",
+                        height: "auto",
+                      }}
+                    />
+                  </a>
+                )}
+
                 <div
                   style={{
                     padding: "1.75rem",
@@ -205,47 +231,32 @@ export default function Projects() {
                     flexDirection: "column",
                   }}
                 >
-                  {/* Title row */}
-                  <div
+                  <h3
                     style={{
-                      display: "flex",
-                      alignItems: "flex-start",
-                      justifyContent: "space-between",
-                      marginBottom: "0.75rem",
+                      fontFamily: "'Space Grotesk', sans-serif",
+                      fontSize: "1.1rem",
+                      fontWeight: 700,
+                      color: "var(--text-primary)",
+                      lineHeight: 1.3,
+                      marginBottom: "0.6rem",
                     }}
                   >
-                    <h3
+                    {project.title}
+                  </h3>
+
+                  {project.metric && (
+                    <div
+                      className="gradient-text"
                       style={{
                         fontFamily: "'Space Grotesk', sans-serif",
-                        fontSize: "1.1rem",
+                        fontSize: "1rem",
                         fontWeight: 700,
-                        color: "var(--text-primary)",
-                        lineHeight: 1.3,
-                        marginRight: "0.5rem",
+                        marginBottom: "0.6rem",
                       }}
                     >
-                      {project.title}
-                    </h3>
-                    {project.featured && (
-                      <span
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          gap: "0.2rem",
-                          background: "rgba(234, 179, 8, 0.1)",
-                          border: "1px solid rgba(234, 179, 8, 0.3)",
-                          color: "#ca8a04",
-                          fontSize: "0.7rem",
-                          fontWeight: 600,
-                          padding: "0.2rem 0.6rem",
-                          borderRadius: "50px",
-                          whiteSpace: "nowrap",
-                        }}
-                      >
-                        <FiStar size={10} /> Featured
-                      </span>
-                    )}
-                  </div>
+                      {project.metric}
+                    </div>
+                  )}
 
                   <p
                     style={{
@@ -256,7 +267,7 @@ export default function Projects() {
                       flex: 1,
                     }}
                   >
-                    {project.description}
+                    {project.summary}
                   </p>
 
                   {/* Tags */}
@@ -287,62 +298,87 @@ export default function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div style={{ display: "flex", gap: "0.75rem" }}>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                        color: "var(--text-secondary)",
-                        textDecoration: "none",
-                        fontSize: "0.85rem",
-                        fontWeight: 500,
-                        padding: "0.4rem 0.85rem",
-                        borderRadius: "8px",
-                        border: "1px solid var(--border)",
-                        transition: "all 0.2s ease",
-                      }}
-                      onMouseEnter={(e) => {
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.borderColor = "var(--accent)";
-                        el.style.color = "var(--accent)";
-                      }}
-                      onMouseLeave={(e) => {
-                        const el = e.currentTarget as HTMLElement;
-                        el.style.borderColor = "var(--border)";
-                        el.style.color = "var(--text-secondary)";
-                      }}
-                    >
-                      <FiGithub size={14} /> Code
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "0.4rem",
-                        color: "white",
-                        textDecoration: "none",
-                        fontSize: "0.85rem",
-                        fontWeight: 500,
-                        padding: "0.4rem 0.85rem",
-                        borderRadius: "8px",
-                        background:
-                          "linear-gradient(135deg, var(--blue-600), var(--blue-500))",
-                        transition: "all 0.2s ease",
-                      }}
-                    >
-                      <FiExternalLink size={14} /> Live Demo
-                    </a>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      alignItems: "center",
+                      gap: "0.75rem",
+                    }}
+                  >
+                    {project.live && <LiveLink href={project.live} />}
+                    {project.github && <CodeLink href={project.github} />}
+                    {project.note && (
+                      <span
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "0.35rem",
+                          color: "var(--text-muted)",
+                          fontSize: "0.8rem",
+                        }}
+                      >
+                        <FiLock size={12} /> {project.note}
+                      </span>
+                    )}
                   </div>
                 </div>
               </motion.article>
             ))}
+          </motion.div>
+
+          {/* Other projects */}
+          <motion.div variants={itemVariants} style={{ marginTop: "3rem" }}>
+            <h3
+              style={{
+                fontFamily: "'Space Grotesk', sans-serif",
+                fontSize: "1.1rem",
+                fontWeight: 700,
+                color: "var(--text-primary)",
+                marginBottom: "1rem",
+                textAlign: "center",
+              }}
+            >
+              Other projects
+            </h3>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fill, minmax(min(280px, 100%), 1fr))",
+                gap: "1rem",
+              }}
+            >
+              {otherProjects.map((project) => (
+                <div
+                  key={project.title}
+                  className="glass-card"
+                  style={{
+                    padding: "1.25rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.75rem",
+                  }}
+                >
+                  <div>
+                    <div
+                      style={{
+                        fontWeight: 700,
+                        color: "var(--text-primary)",
+                        marginBottom: "0.25rem",
+                      }}
+                    >
+                      {project.title}
+                    </div>
+                    <div style={{ color: "var(--text-muted)", fontSize: "0.85rem", lineHeight: 1.6 }}>
+                      {project.summary}
+                    </div>
+                  </div>
+                  <div style={{ display: "flex", gap: "0.75rem", marginTop: "auto" }}>
+                    <LiveLink href={project.live} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

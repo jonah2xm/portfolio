@@ -13,7 +13,6 @@ import {
   SiGit,
   SiLinux,
 } from "react-icons/si";
-import { FiCloud } from "react-icons/fi";
 
 const techCloud = [
   { name: "React", icon: <SiReact size={28} />, color: "#61DAFB" },
@@ -24,7 +23,6 @@ const techCloud = [
   { name: "MongoDB", icon: <SiMongodb size={28} />, color: "#47A248" },
   { name: "Docker", icon: <SiDocker size={28} />, color: "#2496ED" },
   { name: "OpenAI", icon: <SiOpenai size={28} />, color: "#aaaaaa" },
-  { name: "AWS", icon: <FiCloud size={28} />, color: "#FF9900" },
   { name: "Git", icon: <SiGit size={28} />, color: "#F05032" },
   { name: "Linux", icon: <SiLinux size={28} />, color: "#FCC624" },
 ];

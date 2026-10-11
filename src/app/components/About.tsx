@@ -1,13 +1,13 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FiCode, FiBriefcase, FiCpu, FiUsers } from "react-icons/fi";
+import { FiBriefcase, FiUsers, FiMapPin, FiGlobe } from "react-icons/fi";
 
 const stats = [
-  { icon: <FiBriefcase size={22} />, value: "2+", label: "Years Experience" },
-  { icon: <FiCode size={22} />, value: "7+", label: "Projects Delivered" },
-  { icon: <FiCpu size={22} />, value: "5+", label: "AI Integrations" },
-  { icon: <FiUsers size={22} />, value: "5+", label: "Happy Clients" },
+  { icon: <FiBriefcase size={22} />, value: "3+", label: "Years Experience" },
+  { icon: <FiUsers size={22} />, value: "1,000+", label: "Notaura Subscribers" },
+  { icon: <FiMapPin size={22} />, value: "7", label: "Naftal Sites" },
+  { icon: <FiGlobe size={22} />, value: "2", label: "International Clients" },
 ];
 
 export default function About() {
@@ -90,14 +90,15 @@ export default function About() {
                   fontSize: "1.05rem",
                 }}
               >
-                I&apos;m a full-stack developer and AI integration specialist with a
-                deep passion for building technology that{" "}
+                I&apos;m a full-stack developer (Next.js / Node.js) who builds
+                technology that{" "}
                 <strong style={{ color: "var(--text-primary)" }}>
                   actually solves problems
                 </strong>
-                . With 2+ years of experience, I&apos;ve shipped everything from SaaS
-                platforms and e-commerce systems to AI-powered document
-                processors and LLM-driven chat applications.
+                . With 3+ years of experience, I&apos;ve shipped production web
+                apps for international clients and for Naftal (Sonatrach group),
+                from a SaaS with 1,000+ subscribers to an HR system running at 7
+                sites.
               </p>
               <p
                 style={{
@@ -111,16 +112,16 @@ export default function About() {
                 <strong style={{ color: "var(--accent)" }}>
                   intersection of modern web engineering and AI
                 </strong>{" "}
-                — designing architectures that are not only scalable and
-                maintainable, but genuinely intelligent.
+                — real-time systems, Stripe billing, authentication, Docker
+                deployments and AI features like RAG chat, shipped end-to-end.
               </p>
 
               {/* Highlights */}
               {[
-                "🎓 Computer Science & Machine Learning background",
-                "🏗️  Expert in microservices & cloud-native architectures",
-                "🤖 Built RAG pipelines, AI agents & LLM-powered APIs",
-                "🌍  Remote-first, async-fluent, collaboration-driven",
+                "🎓 MSc in Artificial Intelligence (USTO, Oran)",
+                "💳 Stripe subscriptions, OAuth & production deployments",
+                "🤖 RAG pipelines with OpenAI, Mistral & Pinecone",
+                "🌍 Remote (UTC+1) · English, French & Arabic",
               ].map((item) => (
                 <div
                   key={item}

@@ -2,14 +2,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiArrowDown, FiGithub, FiLinkedin, FiDownload } from "react-icons/fi";
-import { SiOpenai } from "react-icons/si";
 
 const roles = [
   "Full-Stack Developer",
-  "AI Integration Specialist",
-  "React & Next.js Expert",
-  "Python & ML Engineer",
-  "API Architect",
+  "Next.js & Node.js Developer",
+  "AI Integration: RAG, OpenAI, Mistral",
+  "Real-Time Systems Builder",
 ];
 
 export default function Hero() {
@@ -195,14 +193,13 @@ export default function Hero() {
             >
               I build{" "}
               <span style={{ color: "var(--accent)", fontWeight: 600 }}>
-                scalable web applications
+                production web apps
               </span>{" "}
-              and integrate{" "}
+              with Next.js and Node.js, from real-time systems to{" "}
               <span style={{ color: "var(--accent)", fontWeight: 600 }}>
-                cutting-edge AI solutions
-              </span>{" "}
-              — from LLM-powered chatbots and RAG pipelines to production-ready
-              full-stack platforms.
+                AI features like RAG chat
+              </span>
+              , used by 1,000+ subscribers and by staff across 7 Naftal sites.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -222,19 +219,25 @@ export default function Hero() {
               <a href="#contact" className="btn-outline">
                 Get In Touch
               </a>
-              <a
-                href="https://drive.google.com/file/d/1zXs2JvLEqbGvU_I4D7CS2mVy_7IZmHSU/view?usp=sharing"
-                className="btn-outline"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  borderColor: "var(--border)",
-                  color: "var(--text-secondary)",
-                }}
-              >
-                <FiDownload size={16} />
-                Resume
-              </a>
+              {[
+                { href: "/Younes-Oubelaid-CV.pdf", label: "Résumé (EN)" },
+                { href: "/Younes-Oubelaid-CV-FR.pdf", label: "CV (FR)" },
+              ].map((cv) => (
+                <a
+                  key={cv.href}
+                  href={cv.href}
+                  className="btn-outline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    borderColor: "var(--border)",
+                    color: "var(--text-secondary)",
+                  }}
+                >
+                  <FiDownload size={16} />
+                  {cv.label}
+                </a>
+              ))}
             </motion.div>
 
             {/* Social links */}
