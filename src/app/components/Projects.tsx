@@ -39,7 +39,6 @@ const projects: Project[] = [
       "Point of sale for a fast-food restaurant in Oran: POS, real-time API, QR menu and thermal-printer agent in one repo, with local/remote sync so it keeps running offline.",
     metric: "14 staff screens",
     tags: ["React 19", "Vite", "Express", "MongoDB", "socket.io", "Docker"],
-    github: "https://github.com/jonah2xm/246",
     image: "/projects/restaurant-pos.png",
     note: "Runs on-site, no public demo",
     gradient: "linear-gradient(135deg, #0369a1, #0ea5e9)",
