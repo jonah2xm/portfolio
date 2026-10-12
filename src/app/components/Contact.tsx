@@ -19,7 +19,7 @@ const contactInfo = [
   {
     icon: <FiMapPin size={20} />,
     label: "Location",
-    value: "Oran ,Algeria (Remote)",
+    value: "Oran, Algeria · Remote (UTC+1)",
   },
   {
     icon: <FiGithub size={20} />,
@@ -155,8 +155,8 @@ export default function Contact() {
               className="section-subtitle"
               style={{ textAlign: "center", margin: "0 auto" }}
             >
-              Have a project in mind? I&apos;m available for freelance, consulting,
-              and full-time opportunities.
+              Open to full-time and part-time remote roles. I&apos;m in UTC+1,
+              with full overlap with European working hours.
             </p>
           </motion.div>
 
@@ -197,9 +197,9 @@ export default function Contact() {
                     lineHeight: 1.7,
                   }}
                 >
-                  Whether you need a full-stack platform, an AI-powered feature,
-                  or a strategic technical consult — I&apos;m here for it. Let&apos;s
-                  build something great.
+                  Full-stack (Next.js / Node.js) roles, especially teams
+                  shipping real-time or AI features. I work remotely in English
+                  and French.
                 </p>
               </motion.div>
 
@@ -396,7 +396,7 @@ export default function Contact() {
                         name="subject"
                         id="contact-subject"
                         required
-                        placeholder="Project inquiry, consulting..."
+                        placeholder="Full-stack role at…"
                         value={form.subject}
                         onChange={handleChange}
                         style={inputStyle}
@@ -427,7 +427,7 @@ export default function Contact() {
                         id="contact-message"
                         required
                         rows={5}
-                        placeholder="Tell me about your project..."
+                        placeholder="Tell me about the role and the team..."
                         value={form.message}
                         onChange={handleChange}
                         style={{

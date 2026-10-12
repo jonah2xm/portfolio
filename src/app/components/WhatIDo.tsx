@@ -266,14 +266,14 @@ export default function WhatIDo() {
                     fontFamily: "'Space Grotesk', sans-serif",
                   }}
                 >
-                  Have a product to build?
+                  Hiring a full-stack developer?
                 </span>
               </div>
               <p
                 style={{ color: "rgba(255,255,255,0.65)", fontSize: "0.9rem" }}
               >
-                From first spec to production launch, let&apos;s talk about what
-                you need.
+                I&apos;m open to full-time and part-time remote roles. My CV is in
+                English and French.
               </p>
             </div>
             <a

@@ -69,11 +69,6 @@ const otherProjects = [
     live: "https://medixa-tau.vercel.app/",
   },
   {
-    title: "EasyShop",
-    summary: "E-commerce storefront with inventory and order management dashboard.",
-    live: "https://easyshop-nu.vercel.app/",
-  },
-  {
     title: "Supermely",
     summary: "AI relationship-counseling chat with WhatsApp and Telegram integration.",
     live: "https://supermely.com/",
