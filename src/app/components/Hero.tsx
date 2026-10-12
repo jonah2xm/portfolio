@@ -222,7 +222,7 @@ export default function Hero() {
               {[
                 {
                   href: "https://drive.google.com/file/d/1VROASnfhSf9d0gwiDf26yBwYDRDfllfl/view?usp=sharing",
-                  label: "Résumé (EN)",
+                  label: "CV (EN)",
                 },
                 {
                   href: "https://drive.google.com/file/d/1YQibaX9Df6QtCkJ_XeRGUek2ZnDk1ad7/view?usp=sharing",
