@@ -220,8 +220,14 @@ export default function Hero() {
                 Get In Touch
               </a>
               {[
-                { href: "/Younes-Oubelaid-CV.pdf", label: "Résumé (EN)" },
-                { href: "/Younes-Oubelaid-CV-FR.pdf", label: "CV (FR)" },
+                {
+                  href: "https://drive.google.com/file/d/1VROASnfhSf9d0gwiDf26yBwYDRDfllfl/view?usp=sharing",
+                  label: "Résumé (EN)",
+                },
+                {
+                  href: "https://drive.google.com/file/d/1YQibaX9Df6QtCkJ_XeRGUek2ZnDk1ad7/view?usp=sharing",
+                  label: "CV (FR)",
+                },
               ].map((cv) => (
                 <a
                   key={cv.href}
