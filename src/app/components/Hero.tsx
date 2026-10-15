@@ -221,11 +221,11 @@ export default function Hero() {
               </a>
               {[
                 {
-                  href: "https://drive.google.com/file/d/1VROASnfhSf9d0gwiDf26yBwYDRDfllfl/view?usp=sharing",
+                  href: "https://drive.google.com/file/d/1iCNbxjItrAMAuzQKA0uM2pDRO0YRu6z7/view?usp=sharing",
                   label: "CV (EN)",
                 },
                 {
-                  href: "https://drive.google.com/file/d/1YQibaX9Df6QtCkJ_XeRGUek2ZnDk1ad7/view?usp=sharing",
+                  href: "https://drive.google.com/file/d/1XsYf9NyziYRI3IVeXgL-8QXFwglHg_PD/view?usp=sharing",
                   label: "CV (FR)",
                 },
               ].map((cv) => (
